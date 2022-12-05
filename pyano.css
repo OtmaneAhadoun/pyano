@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;800&family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper{
+    background-color: rgb(20, 20, 20);
+    width: 780px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    color: gainsboro;
+    text-transform: capitalize;
+}
+header .middle{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header h1{
+    text-shadow: 2px 2px 0px white;
+    letter-spacing: 2px;
+}
+.middle input{
+    accent-color: gainsboro;
+    outline: none;
+    border: none;
+}
+.middle span{
+    font-size: 24px;
+}
+.shown{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.shown small{
+    font-size: 19px;
+}
+.shown input{
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    background-color: #4b4b4b;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.shown input::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: inherit;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+.shown input:checked::before{
+    background-color: white;
+    left: 35px;
+}
+.items{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.items li{
+    user-select: none;
+    cursor: pointer;
+    list-style: none;
+    text-transform: capitalize;
+    width: 88px;
+    height: 200px;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 1px;
+    text-align:bottom ;
+}
+.items li.active{
+    background-color: #e1e1e1;
+}
+.items li.black{
+    width: 60px;
+    height: 140px;
+    border-radius: 0 0 8px 8px;
+    background-color: black;
+    z-index: 2;
+    margin: 0 -22px;
+    color: white;
+    padding-top: 110px;
+}
+.items li.black.active{
+    background-color: rgb(40, 40, 40);
+}
